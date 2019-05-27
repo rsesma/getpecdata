@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="182.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.leam.getpecdata.GetPECDataController">
+   <children>
+      <Label layoutX="15.0" layoutY="14.0" text="Carpeta PECs">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="folder" layoutX="15.0" layoutY="34.0" prefHeight="27.0" prefWidth="440.0" />
+      <Button fx:id="getFolder" layoutX="462.0" layoutY="34.0" mnemonicParsing="false" onAction="#getFolderFired" prefHeight="27.0" prefWidth="11.0" text="..." />
+      <Label fx:id="result" layoutX="13.0" layoutY="72.0" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="474.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="probl" layoutX="13.0" layoutY="100.0" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="474.0" textFill="RED">
+         <padding>
+            <Insets left="5.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="extract" alignment="TOP_LEFT" defaultButton="true" layoutX="422.0" layoutY="138.0" mnemonicParsing="false" onAction="#extractFired" text="Extraer">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.lema.getpecdata;
+package com.leam.getpecdata;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,20 +6,19 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- *
- * @author r
- */
 public class GetPECData extends Application {
     
     @Override
-    public void start(Stage stage) throws Exception {        
-        Parent root = FXMLLoader.load(getClass().getResource("GetPECData.fxml"));
+    public void start(Stage stage) throws Exception {
+    	
+        FXMLLoader loader= new FXMLLoader(getClass().getResource("GetPECData.fxml"));
+        Parent root = loader.load();
+        GetPECDataController c = loader.getController();
         
-        Scene scene = new Scene(root);
+        c.setParameters(getParameters());
         
+        stage.setScene(new Scene(root));
         stage.setTitle("Extraer datos PECs");
-        stage.setScene(scene);
         stage.show();
     }
 
