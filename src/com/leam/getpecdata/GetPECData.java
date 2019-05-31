@@ -11,7 +11,7 @@ public class GetPECData extends Application {
     @Override
     public void start(Stage stage) throws Exception {
     	
-        FXMLLoader loader= new FXMLLoader(getClass().getResource("GetPECData.fxml"));
+        FXMLLoader loader= new FXMLLoader(getClass().getResource("/fxml/GetPECData.fxml"));
         Parent root = loader.load();
         GetPECDataController c = loader.getController();
         
